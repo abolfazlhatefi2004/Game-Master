@@ -1,0 +1,16 @@
+:root {
+    --primary: #0d6efd;
+}
+
+.main__box {
+    margin-top: 200px;
+}
+
+.card {
+    transition: 0.7s;
+}
+
+.card:hover {
+    border: solid 3px var(--primary);
+    transform: translateY(-5%);
+}
