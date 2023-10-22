@@ -1,0 +1,13 @@
+.answer__place {
+    width: 40px;
+    height: 40px;
+}
+
+.game__place {
+    width: 60px;
+    height: 60px;
+}
+
+.chance__place {
+    z-index: 2000;
+}

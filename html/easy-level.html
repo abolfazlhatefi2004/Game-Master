@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASY-LEVEL</title>
+    <!-- link of favIcon -->
+    <link rel="apple-touch-icon" sizes="180x180" href=" ../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href=" ../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href=" ../favicon/favicon-16x16.png">
+    <link rel="manifest" href=" ../favicon/site.webmanifest">
+    <!-- link of CDN BoxIcon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- link of CDN BootStrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- link of my css -->
+    <link rel="stylesheet" href="../css/easy-level.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand">
+                    <i class="bx bx-dice-5"></i>
+                    MASTER MIND</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-underline">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./main-page.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Rules</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                                href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- rules module -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Rules of Game
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" dir="rtl">
+                        <p class="lh-base">در این بازی که به صورت نفره است و در دو سطح راحت و سخت وجود دارد.ابتدا رایانه
+                            ترکیب از رنگ های موجود در بازی را در نظر میگیرد و بایکن به تعداد شانس ها یا به اصطلاح شانس
+                            هایی که دارد میتوند از رنگ ها استفاده کند تا به رمز(همان ترکیب رنگی که رایانه در نظر گرفته
+                            شده )رایانه برسد. رایانه الگویی از چند رنگ رمزی را انتخاب می‌کند. تکراری‌ها قابل قبول هستند،
+                            بنابراین ممکن است حتی چهار مهره ها یک رنگ انتخاب کند. الگوی انتخاب شده در پنج سوراخ جای
+                            می‌گیرند؛ که برای رمز گشا قابل رویت نیست.
+                            رمزگشا سعی می‌کند تا الگو را، هم ترتیب و هم رنگ، در ده (یا پانزده در سطح سخت) مرتبه حدس
+                            بزند. هر حدس به وسیله جای‌گذاری یک ردیف از رنگ ها روی صفحه رمز گشایی انجام می‌شود. هنگامی که
+                            قرار گرفتند، رایانه، در جواب، از صفر تا پنج میخ راهنما را در سوراخ‌های کوچک ردیف حدس قرار
+                            می‌دهد. میخ راهنمای رنگی (معمولاً مشکی) برای هر میخ رمزی از حدس که هم رنگ و هم موقعیت درستی
+                            دارد قرار داده می‌شود. میخ سفید وجود میخی با رنگ صحیح که در موقعیت نادرست قرار دارد نشان
+                            می‌دهد.
+                            یک بازخورد آماده می‌شود، حدس دیگری زده می‌شود؛ حدس‌ها و بازخورد به‌طور متناوب ادامه داده
+                            می‌شوند تا این که یا رمزگشا درست حدس بزند، یا ده (یا پانزده در سطح سخت) حدس نادرست زده شود.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about modale -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel2">
+                            About Game
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" dir="rtl">
+                        <p class="lh-base">فکر بکر یک بازی رمزگشایی برای دو بازیکن است. این بازی به صورت امروزی به همراه
+                            چندین میخ در
+                            سال ۱۹۷۰ توسط مردخای میرویدز، رئیس دفتر پست و متخصص اسرائیلی، اختراع شد. اما این بازی شبیه
+                            یک مداد و کاغذ بازی ابتدایی به نام گاو نر و ماده بود که به بیش از یک قرن پیش بازمی‌گشت.
+
+                            از سال ۱۹۷۱، حقوق مربوط به فکربکر توسط اینویکتا پلاستیک از اودبی دریافت شده‌است. (اینویکتا
+                            همیشه بازی را فکر بکر می‌نامید) آن‌ها در اصل این بازی را خودشان ساخته بودند، اگرچه آن‌ها
+                            اجازهٔ تولید بازی تحت پروانهٔ هزبرو را در سراسر جهان دارند، همچنین دو محصول دیگر که دارای
+                            قوانین تولید آمریکا و اسرائیل هستند.
+                            طرح روی جلد بازی فکر بکر در سال ۱۹۷۳ طرح روی جلد بازی فکر بکر در سال ۲۰۰۳ در اوایل سال ۱۹۷۳،
+                            جعبهٔ بازی تصویری خوش لباس، با تیپ فاخر از یک مرد سفیدپوست که در جلوی تصویر نشسته، همراه یک
+                            زن جذاب آسیایی که در کنار وی ایستاده نشان می‌داد.
+                            دو مدل غیرحرفه‌ای (بیل وودوارد و سیسیلیا فانگ) در ژوئن ۲۰۰۳ برای قرار گرفتن یک تصویر
+                            تبلیغاتی دیگر انتخاب شدند. بازی‌های پایونیر هریسون هیث، یک نسخهٔ خیلی ساده از فکربکر معرفی
+                            کرد، که در آن از دیسک به جای میخ استفاده می‌شد، و شبیه بازی اتصال ۴، تولید قبلی وی بود.
+                            هرچند این نسخه موفقیت بسیار کمی نسبت به کار اسبقش داشت و تنها سود ۳۶۰٬۰۰۰ دلار را برای وی
+                            دربرداشت.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- chance section -->
+        <div class="chance__place  container-fluid row justify-content-center position-sticky top-0">
+            <div
+                class="col-5 m-1 border border-success border-3 d-flex justify-content-around align-items-center rounded-2 bg-light">
+                <i class='bx bxs-heart h2 text-danger'></i>
+                <i class='bx bxs-heart h2 text-danger'></i>
+                <i class='bx bxs-heart h2 text-danger'></i>
+                <i class='bx bxs-heart h2 text-danger'></i>
+                <i class='bx bxs-heart h2 text-danger'></i>
+                <i class='bx bxs-heart h2 text-danger'></i>
+                <i class='bx bxs-heart h2 text-danger'></i>
+                <i class='bx bxs-heart h2 text-danger'></i>
+                <i class='bx bxs-heart h2 text-danger'></i>
+                <i class='bx bxs-heart h2 text-danger'></i>
+            </div>
+        </div>
+        <div class="container-fluid row">
+            <!-- the hint cards -->
+            <section
+                class="col-3 border border-2 border-secondary  m-2 rounded-2 d-flex flex-column align-items-center gap-4">
+                <div class="card m-2 col-10 border-primary">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+                <div class="card m-2 col-10 border-danger">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+                <div class="card m-2 col-10 border-primary">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+                <div class="card m-2 col-10 border-danger">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+                <div class="card m-2 col-10 border-primary">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+                <div class="card m-2 col-10 border-danger">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+                <div class="card m-2 col-10 border-primary">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+                <div class="card m-2 col-10 border-danger">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+                <div class="card m-2 col-10 border-primary">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+                <div class="card m-2 col-10 border-danger">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- game place -->
+            <section class="col-6 border border-2 border-dark  m-2 rounded-2 d-flex flex-column align-items-center">
+                <div class="card m-2 col-8 border-primary">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+                <div class="card m-2 col-8 border-danger">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+                <div class="card m-2 col-8 border-primary">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+                <div class="card m-2 col-8 border-danger">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+                <div class="card m-2 col-8 border-primary">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+                <div class="card m-2 col-8 border-danger">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+                <div class="card m-2 col-8 border-primary">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+                <div class="card m-2 col-8 border-danger">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+                <div class="card m-2 col-8 border-primary">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+                <div class="card m-2 col-8 border-danger">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                        </div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+
+
+    <!-- link of CDN bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+
+</html>
