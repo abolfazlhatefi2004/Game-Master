@@ -120,7 +120,7 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="container-fluid row align-items-start justify-content-center gap-2 position-relative">
         <!-- chance section -->
         <div class="chance__place  container-fluid row justify-content-center position-sticky top-0">
             <div
@@ -137,7 +137,7 @@
                 <i class='bx bxs-heart h2 text-danger'></i>
             </div>
         </div>
-        <div class="container-fluid row">
+        <div class=" row col-10">
             <!-- the hint cards -->
             <section
                 class="col-3 border border-2 border-secondary  m-2 rounded-2 d-flex flex-column align-items-center gap-4">
@@ -283,11 +283,11 @@
                 </div>
             </section>
             <!-- game place -->
-            <section class="col-6 border border-2 border-dark  m-2 rounded-2 d-flex flex-column align-items-center">
+            <section class="col-8 border border-2 border-dark  m-2 rounded-2 d-flex flex-column align-items-center">
                 <div class="card m-2 col-8 border-primary">
                     <div class="card-body row gap-1 justify-content-between">
-                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2">
-                        </div>
+                        <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+
 
                         <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
 
@@ -426,7 +426,89 @@
                 </div>
             </section>
         </div>
+        <!-- color place -->
+        <div
+            class="col-2 border border-2 border-secondary  p-4 rounded-2 d-flex flex-wrap align-content-start justify-content-center gap-3 position-sticky top-0">
+
+            <div class="color__place border border-dark border-3 rounded-circle bg-primary col-2">
+            </div>
+            <div class="color__place border border-dark border-3 rounded-circle bg-success col-2">
+            </div>
+            <div class="color__place border border-dark border-3 rounded-circle bg-danger col-2">
+            </div>
+            <div class="color__place border border-dark border-3 rounded-circle bg-dark col-2">
+            </div>
+            <div class="color__place border border-dark border-3 rounded-circle bg-light col-2">
+            </div>
+
+        </div>
+        </div>
+
     </main>
+    <!-- module place -->
+    <div class="modal fade" id="exampleModalToggle" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
+        aria-hidden="true" style="display: none">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body row gap-1 justify-content-between">
+                    <div class="
+                game__place
+                border border-dark border-3
+                rounded-circle
+                bg-secondary
+                col-2
+              "></div>
+
+                    <div class="
+                game__place
+                border border-dark border-3
+                rounded-circle
+                bg-secondary
+                col-2
+              "></div>
+
+                    <div class="
+                game__place
+                border border-dark border-3
+                rounded-circle
+                bg-secondary
+                col-2
+              "></div>
+
+                    <div class="
+                game__place
+                border border-dark border-3
+                rounded-circle
+                bg-secondary
+                col-2
+              "></div>
+
+                    <div class="
+                game__place
+                border border-dark border-3
+                rounded-circle
+                bg-secondary
+                col-2
+              "></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-dialog">
+            <div class="module__child modal-content text-success display-1 text-center">
+                <div class="module__child modal-body h1">winner</div>
+                <div class="modal-footer d-flex justify-content-around">
+                    <a class="btn btn-primary" href="./main-page.html" role="button">Home</a>
+                    <a class="btn btn-primary" href="./hard-level.html" role="button">play again</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- buttoms -->
+    <div class="container p-2 d-flex justify-content-center gap-5 my-2 border border-2 border-primary rounded-2">
+        <button type="button" class="btn btn-outline-danger">Undo</button>
+        <button type="button" class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
+            score</button>
+    </div>
 
 
 
