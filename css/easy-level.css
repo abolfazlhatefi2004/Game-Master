@@ -28,3 +28,7 @@
     font-size: 6rem;
     background-color: transparent;
 }
+
+.color__body {
+    transition: 0.6s;
+}
