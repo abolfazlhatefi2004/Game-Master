@@ -2,10 +2,13 @@ const generator = document.querySelector(".generator");
 const gameBody = document.querySelector(".game__body");
 const colorBody = document.querySelector(".color__body");
 const btnScore = document.querySelector(".score__btn");
+const hintBody = document.querySelector(".hint__body");
 
 const Color = ["primary", "success", "danger", "dark", "light"];
 const answerCOlors = [];
 const gameColor = [];
+
+const colorCheck = [];
 
 
 // flags
@@ -23,13 +26,13 @@ const generateAnswerColor = () => {
 const setColor = (targetTag) => {
     colorBody.addEventListener("click", (Event) => {
         let color = "";
-        const holeNumber = "";
+        let holeNumber = 0;
         if (Event.target.classList.contains('color__place')) {
-            console.log(targetTag);
-            console.log(targetTag.getAttribute('data-holeNumber'));
-            color += Event.target.getAttribute('data-color');
+            color = Event.target.getAttribute('data-color');
             targetTag.className = `game__place border border-dark border-3 rounded-circle bg-${color}   col-2`;
-            // gameColor[holeNumber] = color;
+
+            holeNumber = Number(targetTag.getAttribute('data-holeNumber'));
+            gameColor[holeNumber] = color;
         }
         targetTag = "";
     });
@@ -44,9 +47,33 @@ const holesCheck = () => {
         }
     }
 };
-const colorCheck = () => {
+const colorChecker = () => {
+    let samlpeAnswerColor = answerCOlors.map(item => item);
+    let sampleGameColor = gameColor.map(item => item);
+    let trueColors = [];
+    let indexColrs = 0;
+    console.log(sampleGameColor);
+    console.log(samlpeAnswerColor);
+    for (let i = 0; i < samlpeAnswerColor.length; i++) {
+        for (let j = 0; j < sampleGameColor.length; j++) {
+            if (samlpeAnswerColor[i] === sampleGameColor[j]) {
+                samlpeAnswerColor.splice(samlpeAnswerColor[i], 1);
+                console.log("i=" + i);
+                sampleGameColor.splice(sampleGameColor[j], 1);
+                console.log("j=" + j);
 
-}
+                i--;
+                j = sampleGameColor.length + 1;
+                trueColors[indexColrs] = indexColrs;
+                indexColrs++;
+            }
+        }
+    }
+    trueColors.map((item) => {
+        hintBody.children[item].classList.remove('bg-secondary');
+        hintBody.children[item].classList.add('bg-light');
+    });
+};
 
 
 generateAnswerColor();
@@ -65,7 +92,7 @@ gameBody.addEventListener("click", (e) => {
 btnScore.addEventListener("click", () => {
     holesCheck();
     if (flagHoles) {
-        console.log(gameColor);
+        colorChecker();
     }
 
 
