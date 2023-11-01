@@ -124,7 +124,7 @@
         <!-- chance section -->
         <div class="chance__place  container-fluid row justify-content-center position-sticky top-0">
             <div
-                class="col-5 m-1 border border-success border-3 d-flex justify-content-around align-items-center rounded-2 bg-light">
+                class="heart__place col-5 m-1 border border-success border-3 d-flex justify-content-around align-items-center rounded-2 bg-light">
                 <i class='bx bxs-heart h2 text-danger'></i>
                 <i class='bx bxs-heart h2 text-danger'></i>
                 <i class='bx bxs-heart h2 text-danger'></i>
@@ -140,40 +140,46 @@
         <div class=" row col-10">
             <!-- the hint cards -->
             <section
-                class="col-3 border border-2 border-secondary  m-2 rounded-2 d-flex flex-column align-items-center gap-4">
+                class="hint__body col-3 border border-2 border-secondary  m-2 rounded-2 d-flex flex-column align-items-center gap-4">
                 <div class="card m-2 col-10 border-primary">
-                    <div class="hint__body card-body row gap-1 justify-content-between">
-                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2">
+                    <div class="card-body row gap-1 justify-content-between">
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"
+                            data-row="0">
                         </div>
 
-                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"
+                            data-row="0"></div>
 
-                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"
+                            data-row="0"></div>
 
-                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"
+                            data-row="0"></div>
 
-                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"></div>
+                        <div class="answer__place border border-dark border-3 rounded-circle bg-secondary col-2"
+                            data-row="0"></div>
                     </div>
                 </div>
             </section>
             <!-- game place -->
-            <section class="col-8 border border-2 border-dark  m-2 rounded-2 d-flex flex-column align-items-center">
+            <section
+                class="game__body col-8 border border-2 border-dark  m-2 rounded-2 d-flex flex-column align-items-center">
                 <div class="card m-2 col-8 border-primary">
-                    <div class="game__body card-body row gap-1 justify-content-between">
+                    <div class="card-body row gap-1 justify-content-between">
                         <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"
-                            data-holeNumber="0"></div>
+                            data-holeNumber="0" data-row="0"></div>
 
                         <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"
-                            data-holeNumber="1"></div>
+                            data-holeNumber="1" data-row="0"></div>
 
                         <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"
-                            data-holeNumber="2"></div>
+                            data-holeNumber="2" data-row="0"></div>
 
                         <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"
-                            data-holeNumber="3"></div>
+                            data-holeNumber="3" data-row="0"></div>
 
                         <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"
-                            data-holeNumber="4"></div>
+                            data-holeNumber="4" data-row="0"></div>
                     </div>
                 </div>
         </div>
