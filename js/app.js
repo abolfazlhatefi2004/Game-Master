@@ -2,10 +2,15 @@ const generator = document.querySelector(".generator");
 const gameBody = document.querySelector(".game__body");
 const colorBody = document.querySelector(".color__body");
 const btnScore = document.querySelector(".score__btn");
+const setModul = document.querySelector(".mdl__place");
 const hintBody = document.querySelector(".hint__body");
-const hearts = document.querySelector(".heart__place");
+const heartHome = document.querySelector(".heart__place");
+const hearts = heartHome.children;
 
+// easyLevel colors
 const Color = ["primary", "success", "danger", "dark", "light"];
+// hardLevel colors
+const hardColor = ["primary", "success", "danger", "dark", "light", "info", "warning", "bootstrap-color"];
 const answerCOlors = [];
 const gameColor = [];
 
@@ -14,6 +19,8 @@ let rowCounter = 0;
 
 // flags
 let flagHoles = true;
+let flagHeart = true;
+
 
 const generateRow = () => {
     gameBody.innerHTML += `<div class="card m-2 col-8 border-primary">
@@ -56,11 +63,20 @@ const generateRow = () => {
 </div>`;
 };
 const generateAnswerColor = () => {
-    Color.map((item, index) => {
-        const random = Math.floor(Math.random() * 5);
-        generator.innerHTML += `<div class='game__place border border-dark border-3 rounded-circle bg-${Color[random]} col-2'}></div>`;
-        answerCOlors[index] = Color[random];
-    });
+    const colorCounter = colorBody.children.length;
+    if (colorCounter == 5) {
+        Color.map((item, index) => {
+            const random = Math.floor(Math.random() * 5);
+            generator.innerHTML += `<div class='game__place border border-dark border-3 rounded-circle bg-${Color[random]} col-2'}></div>`;
+            answerCOlors[index] = Color[random];
+        });
+    } else {
+        Color.map((item, index) => {
+            const random = Math.floor(Math.random() * 8);
+            generator.innerHTML += `<div class='game__place border border-dark border-3 rounded-circle bg-${hardColor[random]} col-2'}></div>`;
+            answerCOlors[index] = hardColor[random];
+        });
+    }
 };
 const setColor = (targetTag) => {
     colorBody.addEventListener("click", (Event) => {
@@ -82,9 +98,10 @@ const holesCheck = () => {
     for (let i = 0; i < holes.length; i++) {
         if (holes[i].classList.contains('bg-secondary')) {
             flagHoles = false;
-            return alert('you should fill of the holes');
+            return alert('you should fill all of the holes');
         }
     }
+
     flagHoles = true;
 };
 const colorChecker = () => {
@@ -96,8 +113,8 @@ const colorChecker = () => {
     for (let i = 0; i < samlpeAnswerColor.length; i++) {
         for (let j = 0; j < sampleGameColor.length; j++) {
             if (samlpeAnswerColor[i] === sampleGameColor[j]) {
-                samlpeAnswerColor.splice(samlpeAnswerColor[i], 1);
-                sampleGameColor.splice(sampleGameColor[j], 1);
+                samlpeAnswerColor.splice(i, 1);
+                sampleGameColor.splice(j, 1);
                 i--;
                 trueColors[indexColrs] = indexColrs;
                 indexColrs++;
@@ -109,6 +126,7 @@ const colorChecker = () => {
         setHint.children[item].classList.remove('bg-secondary');
         setHint.children[item].classList.add('bg-light');
     });
+    console.log("hi");
 };
 const placeCheker = () => {
     let setHint = hintBody.children[rowCounter].children[0];
@@ -126,22 +144,41 @@ const placeCheker = () => {
 
     }
 };
+const heartCheck = () => {
+    const heartPlace = hearts.length;
+    if (heartPlace == 3 && flagHeart) {
+        alert('be careful,you going to be loser');
+        heartHome.classList.remove('border-success');
+        heartHome.classList.add('border-danger');
+    } else if (heartPlace == 0) {
+
+        setModul.children[0].innerHTML = `LOSER`;
+        setModul.classList.remove('text-success');
+        setModul.classList.add('text-danger');
+
+        btnScore.setAttribute('data-bs-target', '#staticBackdrop');
+        btnScore.setAttribute('data-bs-toggle', 'modal');
+        btnScore.click();
+    }
+}
 const judgementGame = () => {
-    const heartPlace = hearts.children;
     if (gameChecker == 5) {
+        flagHeart = false;
         btnScore.setAttribute('data-bs-target', '#staticBackdrop');
         btnScore.setAttribute('data-bs-toggle', 'modal');
         btnScore.click();
     } else {
+        hearts[0].remove();
+        heartCheck();
         rowCounter++;
         generateRow();
-        heartPlace[0].remove();
         gameChecker = 0;
     }
 
 };
 
 generateAnswerColor();
+console.log(answerCOlors);
 
 
 
