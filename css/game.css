@@ -35,3 +35,74 @@
     font-size: 6rem;
     background-color: transparent;
 }
+
+.color__body {
+    transform: 0.7s;
+}
+
+.color__body:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+@media(min-width:700px) and (max-width:950px) {
+    .answer__place {
+        width: 30px;
+        height: 30px;
+    }
+
+    .game__place {
+        width: 40px;
+        height: 40px;
+    }
+
+    .color__place {
+        width: 30px;
+        height: 30px;
+    }
+
+    .bxs-heart {
+        font-size: 1rem;
+    }
+
+    .card__place {
+        margin-top: 3rem !important;
+    }
+
+    .hint__body>.card>.card-body {
+        justify-content: center !important;
+    }
+}
+
+@media (max-width:700px) {
+    .answer__place {
+        width: 20px;
+        height: 20px;
+    }
+
+    .game__place {
+        width: 30px;
+        height: 30px;
+    }
+
+    .color__place {
+        width: 25px;
+        height: 25px;
+    }
+
+    .bxs-heart {
+        font-size: 0.9rem;
+    }
+
+    .card__place {
+        margin-top: 1.5rem !important;
+        margin-bottom: 2.3rem !important;
+    }
+
+    .chance__place {
+        width: 65% !important;
+    }
+
+    .hint__body>.card {
+        margin-top: 0.8rem;
+    }
+}

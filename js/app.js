@@ -16,6 +16,7 @@ const gameColor = [];
 
 let gameChecker = 0;
 let rowCounter = 0;
+let holeNumber = 0;
 
 // flags
 let flagHoles = true;
@@ -23,7 +24,7 @@ let flagHeart = true;
 
 
 const generateRow = () => {
-    gameBody.innerHTML += `<div class="card m-2 col-8 border-primary">
+    gameBody.innerHTML += `<div class="card__place card m-2 col-8 border-primary">
     <div class="card-body row gap-1 justify-content-between">
         <div class="game__place border border-dark border-3 rounded-circle bg-secondary col-2"
             data-holeNumber="0" data-row='${rowCounter}'></div>
@@ -81,7 +82,6 @@ const generateAnswerColor = () => {
 const setColor = (targetTag) => {
     colorBody.addEventListener("click", (Event) => {
         let color = "";
-        let holeNumber = 0;
         if (Event.target.classList.contains('color__place')) {
             color = Event.target.getAttribute('data-color');
             targetTag.className = `game__place border border-dark border-3 rounded-circle bg-${color}   col-2`;
@@ -126,7 +126,6 @@ const colorChecker = () => {
         setHint.children[item].classList.remove('bg-secondary');
         setHint.children[item].classList.add('bg-light');
     });
-    console.log("hi");
 };
 const placeCheker = () => {
     let setHint = hintBody.children[rowCounter].children[0];
@@ -150,7 +149,7 @@ const heartCheck = () => {
         alert('be careful,you going to be loser');
         heartHome.classList.remove('border-success');
         heartHome.classList.add('border-danger');
-    } else if (heartPlace == 0) {
+    } else if (heartPlace == 0 && flagHeart) {
 
         setModul.children[0].innerHTML = `LOSER`;
         setModul.classList.remove('text-success');
@@ -178,10 +177,25 @@ const judgementGame = () => {
 };
 
 generateAnswerColor();
-console.log(answerCOlors);
 
 
+colorBody.addEventListener("click", (e) => {
+    const holesGame = gameBody.children[rowCounter].children[0].children;
+    let color = "";
+    if (e.target.classList.contains('color__place')) {
+        color = e.target.getAttribute('data-color');
+        for (let i of holesGame) {
+            if (i.classList.contains('bg-secondary')) {
 
+                i.classList.remove('bg-secondary');
+                i.classList.add(`bg-${color}`);
+                holeNumber = Number(i.getAttribute('data-holeNumber'));
+                gameColor[holeNumber] = color;
+                break;
+            }
+        }
+    }
+});
 gameBody.addEventListener("click", (e) => {
     let rowChecker = Number(e.target.getAttribute(`data-row`));
     if (e.target.classList.contains('game__place') && rowChecker == rowCounter) {
@@ -202,6 +216,4 @@ btnScore.addEventListener("click", () => {
 
 
 });
-
-
 
