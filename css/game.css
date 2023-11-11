@@ -73,7 +73,7 @@
     }
 }
 
-@media (max-width:700px) {
+@media (min-width:390px) and (max-width:700px) {
     .answer__place {
         width: 20px;
         height: 20px;
@@ -104,5 +104,71 @@
 
     .hint__body>.card {
         margin-top: 0.8rem;
+    }
+}
+
+@media (min-width:375px) and (max-width:390px) {
+    .answer__place {
+        width: 16px !important;
+        height: 16px;
+    }
+
+    .game__place {
+        width: 25px;
+        height: 25px;
+    }
+
+    .color__place {
+        width: 25px;
+        height: 25px;
+    }
+
+    .bxs-heart {
+        font-size: 0.8rem;
+    }
+
+    .card__place {
+        margin-top: 2rem !important;
+    }
+
+    .chance__place {
+        width: 65% !important;
+    }
+
+    .hint__body {
+        gap: 0.9rem !important;
+    }
+}
+
+@media (max-width:375px) {
+    .answer__place {
+        width: 14px !important;
+        height: 14px;
+    }
+
+    .game__place {
+        width: 20px;
+        height: 20px;
+    }
+
+    .color__place {
+        width: 20px;
+        height: 20px;
+    }
+
+    .bxs-heart {
+        font-size: 0.7rem;
+    }
+
+    .card__place {
+        margin-top: 1.3rem !important;
+    }
+
+    .chance__place {
+        width: 80% !important;
+    }
+
+    .hint__body {
+        gap: 3rem !important;
     }
 }

@@ -21,6 +21,7 @@ let holeNumber = 0;
 // flags
 let flagHoles = true;
 let flagHeart = true;
+let flagColor = true;
 
 
 const generateRow = () => {
@@ -182,7 +183,7 @@ generateAnswerColor();
 colorBody.addEventListener("click", (e) => {
     const holesGame = gameBody.children[rowCounter].children[0].children;
     let color = "";
-    if (e.target.classList.contains('color__place')) {
+    if (e.target.classList.contains('color__place') && flagColor) {
         color = e.target.getAttribute('data-color');
         for (let i of holesGame) {
             if (i.classList.contains('bg-secondary')) {
@@ -199,12 +200,13 @@ colorBody.addEventListener("click", (e) => {
 gameBody.addEventListener("click", (e) => {
     let rowChecker = Number(e.target.getAttribute(`data-row`));
     if (e.target.classList.contains('game__place') && rowChecker == rowCounter) {
+        flagColor = false;
         colorBody.classList.add("shadow");
         setColor(e.target);
     } else {
         colorBody.classList.remove("shadow");
     }
-
+    flagColor = true;
 });
 btnScore.addEventListener("click", () => {
     holesCheck();
