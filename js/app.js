@@ -81,10 +81,12 @@ const generateAnswerColor = () => {
     }
 };
 const setColor = (targetTag) => {
+    (targetTag.classList.add('bg-secondary')) ? console.log("hi") : targetTag.classList.add('bg-secondary');
     colorBody.addEventListener("click", (Event) => {
         let color = "";
         if (Event.target.classList.contains('color__place')) {
             color = Event.target.getAttribute('data-color');
+
             targetTag.className = `game__place border border-dark border-3 rounded-circle bg-${color}   col-2`;
 
             holeNumber = Number(targetTag.getAttribute('data-holeNumber'));
